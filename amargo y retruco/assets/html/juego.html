@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>game</title>
-  
-</head>
-<body>
-    <canvas></canvas>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: relative; display: inline-block">
+      <div
+        style="
+          position: absolute;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          padding: 15px;
+        "
+      >
+        <div
+          style="
+            position: relative;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+          ">
+          <div style="background-color: red; height: 60px; width: 100%"></div>
+          <div id="vida1"></div>
+        </div>
+        <div id="faketimer"></div>
+        <div style="position: relative; height: 60px; width: 100%">
+          <div style="background-color: red; height: 60px"></div>
+          <div id="vida2"></div>
+        </div>
+      </div>
+      <div id="ganadores"></div>
+      
 
-</body>
-<script src="../js/index.js"></script>
 
+      <canvas><div id="fondo"></div></canvas>
+    </div>
+
+    <script src="../js/index.js"></script>
+
+  </body>
 </html>
