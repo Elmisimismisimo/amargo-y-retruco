@@ -1,5 +1,7 @@
 const canvas = document.querySelector('canvas');
 const a =canvas.getContext('2d');
+let puntos=0
+
 
 canvas.width= 1024
 canvas.height=576
@@ -318,7 +320,7 @@ place:{
 
     ataque: {
         place:{
-            x:-255,
+            x:-235,
             y:30
         },
         width:170,
@@ -359,10 +361,10 @@ function ganador({jugador, jugador2})
     if (jugador.vida===jugador2.vida){
         document.querySelector('#ganadores').innerHTML='Empate'}
      else if(jugador.vida>jugador2.vida){
-        document.querySelector('#ganadores').innerHTML='jugador 1  gana'
+        document.querySelector('#ganadores').innerHTML='jugador 1  gana precione f5 para jugar otra vez'
         }
         else if(jugador.vida<jugador2.vida){
-            document.querySelector('#ganadores').innerHTML='jugador 2 gana'
+            document.querySelector('#ganadores').innerHTML='jugador 2 gana - precione f5 para jugar otra vez'
     }
    
     }
@@ -420,14 +422,15 @@ if (colicion({rect1: jugador,rect2: jugador2})&&jugador.facaso)
     {
         jugador2.golpeado()
         jugador.facaso=false
-        jugador2.vida-=10
+        jugador2.vida-=0
         
         document.querySelector('#vida2').style.width=jugador2.vida+'%'
         
    console.log("jugador 1 HIT")
 
    if (jugador.vida<=0||jugador2.vida<=0){
-    ganador({jugador,jugador2})
+    ganador({jugador,jugador2
+    })
    }
 
 }
@@ -466,6 +469,7 @@ animar()
             case "g":
             jugador.golpe()
             break
+            
 
     }}
     if (!jugador2.muerte ){
